@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Attendance Records</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+     
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      padding: 20px;
+      min-height: 100vh;
+    }
+    h1 {
+      color: #ffffff;
+      animation: fadeInDown 1s ease;
+      text-align: center;
+    }
+    table {
+      border-collapse: collapse;
+      width: 90%;
+      margin: 20px auto;
+      background: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    th, td {
+      padding: 12px 15px;
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+    }
+    th {
+      background: #007bff;
+      color: white;
+    }
+    tr:nth-child(even) {
+      background: #f2f2f2;
+    }
+    tr:hover {
+      background: #e6f7ff;
+    }
+    a {
+      display: inline-block;
+      margin: 20px auto;
+      text-decoration: none;
+      padding: 10px 20px;
+      background: #007bff;
+      color: white;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+    a:hover {
+      background: #0056b3;
+    }
+
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateX(-30px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+  </style>
+</head>
+<body>
+  <h1>Attendance Records</h1>
+
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>Student ID</th>
+      <th>Name</th>
+      <th>Timestamp</th>
+      <th>Method</th>
+    </tr>
+    {% for r in records %}
+    <tr>
+      <td>{{ r['id'] }}</td>
+      <td>{{ r['student_id'] }}</td>
+      <td>{{ r['name'] }}</td>
+      <td>{{ r['timestamp'] }}</td>
+      <td>{{ r['method'] }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+
+  <div style="text-align:center;">
+    <a href="/">⬅ Back</a>
+  </div>
+</body>
+</html>

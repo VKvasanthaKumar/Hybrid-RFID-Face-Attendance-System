@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enroll Student</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      background: #fff;
+      padding: 30px 40px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      width: 350px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 22px;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    label {
+      display: block;
+      text-align: left;
+      margin: 10px 0 5px;
+      font-size: 14px;
+      color: #444;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 14px;
+      margin-bottom: 15px;
+      outline: none;
+      transition: border 0.3s;
+    }
+
+    input[type="text"]:focus {
+      border-color: #2575fc;
+    }
+
+    input[type="submit"] {
+      width: 100%;
+      padding: 12px;
+      background: #2575fc;
+      border: none;
+      border-radius: 8px;
+      color: #fff;
+      font-size: 15px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    input[type="submit"]:hover {
+      background: #1a5edb;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 15px;
+      font-size: 14px;
+      color: #2575fc;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .back-link:hover {
+      color: #6a11cb;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Enroll New Student</h1>
+    <form method="post">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="reg_no">Registration Number:</label>
+      <input type="text" id="reg_no" name="reg_no" required>
+
+      <label for="rfid_tag">RFID TAG</label>
+      <input type="text" id="rfid_tag" name="rfid_tag" required>
+
+      <input type="submit" value="Start Enrollment">
+    </form>
+    <a class="back-link" href="{{ url_for('index') }}">← Back</a>
+  </div>
+</body>
+</html>
