@@ -1,0 +1,6 @@
+flask
+opencv-python
+opencv-contrib-python
+numpy
+pandas
+pillow
