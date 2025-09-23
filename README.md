@@ -5,7 +5,7 @@ copy in drive IOT & EM
 
 
 This project is a **RFID + Face Recognition-based Automated Attendance System**.
-It uses **OpenCV, SQLite, and Python** to detect faces, recognize students, and mark their attendance automatically.
+It uses **OpenCV, SQLite, and Python** to detect facesand Scan RFID , recognize students, and mark their attendance automatically.
 
 ---
 
@@ -15,7 +15,7 @@ It uses **OpenCV, SQLite, and Python** to detect faces, recognize students, and 
 * **Python 3.9.6** (Recommended)
      * Works with Python 3.13 also (make sure pip packages install properly)
 * **SQLite** (Database)
-* **RFID Module with tag
+* **RFID Module with tag** using any one RFID Module LIke RC522 RFID module or EM18 RFID Module
 
 ---
 
@@ -214,6 +214,7 @@ Summary:
        
                 
    
+
 
 
 
